@@ -9,8 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: docker build -t magnumcodus/docker-react -f ./client/Dockerfile.dev .
-      - run: docker run -e CI=true magnumcodus/docker-react npm test -- --coverage
+      # - run: docker build -t magnumcodus/docker-react -f ./client/Dockerfile.dev .
+      # - run: docker run -e CI=true magnumcodus/docker-react npm test -- --coverage
 
       - run: docker build -t magnumcodus/multi-client ./client
       - run: docker build -t magnumcodus/multi-nginx ./nginx
