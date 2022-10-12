@@ -16,3 +16,8 @@ jobs:
       - run: docker build -t magnumcodus/multi-nginx ./nginx
       - run: docker build -t magnumcodus/multi-server ./server
       - run: docker build -t magnumcodus/multi-worker ./worker
+
+      - run: docker push magnumcodus/multi-client      
+      - run: docker push magnumcodus/multi-nginx
+      - run: docker push magnumcodus/multi-server
+      - run: docker push magnumcodus/multi-worker
